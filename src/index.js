@@ -11,21 +11,27 @@ function printPlate(plate) {
   plate.forEach((line) => console.log(line));
 }
 
-// Choix case
-const readline = require('readline').createInterface({
-  input: process.stdin,
-  output: process.stdout
+// init questions
+const readline = require("readline");
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
 });
 
-// Annonce case choisie
-readline.question('A toi de jouer ! ', Number => {
-  if (Number<1 || Number>9) {
-    throw new Error('Le nombre doit être entre 1 et 9');
-  }
-  console.log(`Tu as joué en ${Number} !`);
-  plate[1][2] = 'x';
-  printPlate(plate)
-  readline.close();
+// Choix cases
+rl.question("Choisis la coordonée x : ", function(NumberX) {
+    if (NumberX<0 || NumberX>2) {
+      throw new Error('Le nombre doit être entre 0 et 2');
+    }
+    rl.question("Choisis la coordonée y : ", function(NumberY) {
+        if (NumberY<0 || NumberY>2) {
+          throw new Error('Le nombre doit être entre 0 et 2');
+        }
+        console.log(`Tu as joué en ${NumberX} : ${NumberY} !`);
+        plate[NumberY][NumberX] = 'x'; // Case remplie
+        printPlate(plate) // Affiche tableau avec case remplie
+        rl.close();
+    });
 });
 
 // ____________________________
