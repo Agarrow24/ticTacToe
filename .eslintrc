@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "airbnb",
+    "airbnb/hooks",
+    "plugin:jest/recommended"
+  ],
+  "parser": "babel-eslint",
+  "plugins": ["jest"],
+  "rules": {
+    "strict": 0
+  }
+}
