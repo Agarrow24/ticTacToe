@@ -1,7 +1,6 @@
 # CESI 2020/2021 - Node.js - TIC TAC TOE API
 
-> NOM et PRENOM des membres du binome
-
+> CHOGNOT Ambre / FRANTZEN Rejane
 ## Description
 
 Implémentation du **Tic Tac Toe** en **Node.js** jouable en ligne (serveur).
