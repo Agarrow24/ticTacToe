@@ -1,7 +1,7 @@
 const EMPTY_BOX = '.';
 
-const X_SIGN = 'x';
-const O_SIGN = 'o';
+const X_SIGN = 'croiss.png';//'<img src='croiss.png' width="128" height="128">';
+const O_SIGN = 'circl.png';//'<img src='circl.png' width="128" height="128">';
 
 const PLATE_X_SIZE = 3;
 const PLATE_Y_SIZE = 3;
