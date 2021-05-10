@@ -91,10 +91,6 @@ function isGameNull(plate) {
   return !isThereAWinner(plate) && !plate.reduce((state, box) => box === EMPTY_BOX || state, false);
 }
 
-function myFunction() {
-    document.getElementById("truc").innerHTML = O_SIGN;
-}
-
 export {
    isCaseEmpty,
    isCoordValid,
@@ -108,5 +104,4 @@ export {
    isThereAWinner,
    X_SIGN,
    O_SIGN,
-   myFunction
 };

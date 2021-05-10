@@ -2,10 +2,17 @@ import * as game from './game';
 
 const plate = game.initPlate();
 const joueur = [];
+const partie = [];
 
 function setPseudo(pseudo) {
     if (joueur.indexOf(pseudo) < 0) {
         joueur.push(pseudo);
+    }
+}
+
+function setNumPartie(numPartie) {
+    if (partie.indexOf(numPartie) < 0) {
+        partie.push(numPartie);
     }
 }
 
@@ -50,5 +57,6 @@ function play()
 
 export {
     setPseudo,
+    setNumPartie,
     play,
 }

@@ -40,8 +40,10 @@
         <script>
             function myFunction() {
                 const pseudo = document.getElementById("pseudo1").value;
+                const numPartie = document.getElementById("numPartie").value;
                 const Http = new XMLHttpRequest();
-                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
+                const url='http://localhost:8080/setPseudo?pseudo='+pseudo+'/setPartie?numPartie='+numPartie;
+
                 Http.open("GET", url);
                 Http.send();
 
@@ -51,15 +53,6 @@
             }
 
             function startGame() {
-                const pseudo = document.getElementById("pseudo1").value;
-                const Http = new XMLHttpRequest();
-                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
-                Http.open("GET", url);
-                Http.send();
-
-                Http.onreadystatechange = (e) => {
-                console.log(Http.responseText)
-                }
             }
         </script>
     </div>

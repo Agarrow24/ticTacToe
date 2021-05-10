@@ -19,7 +19,7 @@
             <section class="col-lg-12">
             <div id="Jeu">
                 <div>
-                    <button type="button" id="truc" class="btn btn-secondary"></button>
+                    <button type="button" id="case1" class="btn btn-secondary"></button>
                     <button type="button" class="btn btn-secondary"></button>
                     <button type="button" class="btn btn-secondary"></button>
                 </div>
@@ -46,8 +46,9 @@
         <script>
             function myFunction() {
                 const pseudo = document.getElementById("pseudo1").value;
+                const numPartie = document.getElementById("numPartie").value;
                 const Http = new XMLHttpRequest();
-                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
+                const url='http://localhost:8080/setPseudo?pseudo='+pseudo+'&setNumPartie?numPartie='+numPartie;
                 Http.open("GET", url);
                 Http.send();
 
@@ -57,15 +58,6 @@
             }
 
             function startGame() {
-                const pseudo = document.getElementById("pseudo1").value;
-                const Http = new XMLHttpRequest();
-                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
-                Http.open("GET", url);
-                Http.send();
-
-                Http.onreadystatechange = (e) => {
-                console.log(Http.responseText)
-                }
             }
         </script>
     </div>
