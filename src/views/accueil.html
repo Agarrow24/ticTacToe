@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <title>❌ Tic Tac Toe ➰</title>
+        <meta charset="utf-8"/>
+        <meta name="author">
+        <meta name="description" content="TIC TAC TOE">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://bootswatch.com/4/sketchy/bootstrap.min.css" />
+        <link rel="stylesheet" href="plateau.css" />
+    </head>
+
+<body>
+    <div class="container">
+        <h1>❌ Tic Tac Toe ➰ </h1>
+    </div>
+    <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Votre nom de joueur</label>
+                <input type="text" class="form-control" id="pseudo1">
+            </div>
+            <div class="form-group">
+                <label>Rejoindre une partie</label>
+                <input type="text" class="form-control" id="numPartie">
+            </div>
+            <div class="form-group">
+                <label>Créer une partie</label>
+                <input type="text" class="form-control" id="createPartie" value="12315138463131" disabled>
+            </div>
+            <button type="button" onclick="myFunction()" class="btn btn-success"><a href="./plateau.html" style="text-decoration:none">C'est parti !</a></button>
+        </form>
+        
+        <div class="container">
+            <p>Réalisé par Réjane et Ambre <br/><br/><br/></p>
+        </div>
+        <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            function myFunction() {
+                const pseudo = document.getElementById("pseudo1").value;
+                const Http = new XMLHttpRequest();
+                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
+                Http.open("GET", url);
+                Http.send();
+
+                Http.onreadystatechange = (e) => {
+                console.log(Http.responseText)
+                }
+            }
+
+            function startGame() {
+                const pseudo = document.getElementById("pseudo1").value;
+                const Http = new XMLHttpRequest();
+                const url='http://localhost:8080/setPseudo?pseudo='+pseudo;
+                Http.open("GET", url);
+                Http.send();
+
+                Http.onreadystatechange = (e) => {
+                console.log(Http.responseText)
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
