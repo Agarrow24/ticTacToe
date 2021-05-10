@@ -2,7 +2,7 @@
 <html lang="fr">
 
     <head>
-        <title>TIC TAC TOE</title>
+        <title>❌ Tic Tac Toe ➰</title>
         <meta charset="utf-8"/>
         <meta name="author">
         <meta name="description" content="TIC TAC TOE">
@@ -16,10 +16,25 @@
         <h1>❌ Tic Tac Toe ➰</h1>
     </div>
     <div class="container">
+        <form>
+            <div class="form-group">
+                <label>Votre nom de joueur</label>
+                <input type="text" class="form-control" id="pseudo1">
+            </div>
+            <div class="form-group">
+                <label>Rejoindre une partie</label>
+                <input type="text" class="form-control" id="numPartie">
+            </div>
+            <div class="form-group">
+                <label>Créer une partie</label>
+                <input type="text" class="form-control" id="createPartie" value="12315138463131" disabled>
+            </div>
+            <button type="button" class="btn btn-success">C'est parti !</button>
+        </form>
         <section class="col-lg-12">
             <div id="Jeu">
                 <div>
-                    <button type="button" class="btn btn-secondary"></button>
+                    <button type="button" onclick="myFunction()" id="truc" class="btn btn-secondary"></button>
                     <button type="button" class="btn btn-secondary"></button>
                     <button type="button" class="btn btn-secondary"></button>
                 </div>
@@ -36,14 +51,14 @@
 
                 <div id="StatutJeu"></div>
             </div>
-            <footer class="pied" style="margin-top: 15px;">
-
-            </footer>
+            <div class="container">
+                <p>Réalisé par Réjane et Ambre <br/><br/><br/></p>
+            </div>
         </section>
 
         <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src=".\index.js"></script>
+        <script src="..\index.js"></script>
     </div>
 </body>
 
